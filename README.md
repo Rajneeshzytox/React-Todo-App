@@ -1,7 +1,3 @@
-Here's a description for your GitHub repository:
-
----
-
 # Todo App with Vite, React, TailwindCSS, and DaisyUI
 
 This project is a Todo application built to learn and demonstrate the fundamentals of React. The app is developed using Vite, React, TailwindCSS, and DaisyUI. It covers essential React concepts such as components, props, rendering components using the `map` function, and editing arrays of objects in state.
@@ -51,9 +47,6 @@ To get a local copy up and running, follow these simple steps:
 
 
 2. Open your browser and navigate to `http://localhost:5173/` to see the app in action.
-
-
----
 
 
 ---
