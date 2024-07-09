@@ -1,5 +1,6 @@
 import CardStats from "../components/CardStats";
 import CircleStats from "../components/CircleStats";
+
 export default function Col_1() {
   return (
     <section className="min-h-screen  col-1 grid grid-cols-2 p-4 md:grid-cols-4 lg:grid-cols-2 gap-4 relative overflow-clip bg-base-300 z-0">

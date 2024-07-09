@@ -53,7 +53,7 @@ export default function Navbar() {
                   Theme
                 </div>
                 <div tabIndex={0} className="dropdown-content menu menu-sm">
-                  <div className="theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
+                  <div className="theme-controller theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
                     <span className="aspect-square size-5 bg-primary inline-block rounded-full mr-4"></span>
                     Rajneesh
                   </div>
@@ -85,6 +85,8 @@ export default function Navbar() {
           <li>
             <a href="#create-todo">Add a todo</a>
           </li>
+
+          {/* todo theme */}
           <div className="divider"></div>
           <li className="dropdown">
             <div
@@ -94,23 +96,30 @@ export default function Navbar() {
             >
               theme
             </div>
-            <div
+            <ul
               tabIndex={0}
               className="dropdown-content hover:bg-base-300 flex  flex-col items-start"
             >
-              <div className="theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
+              <li value="light" 
+              className=" theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
+                <input 
+                type="radio"
+                  name="theme"
+                  className="theme-controller"
+                  value="light"
+                />
                 <span className="aspect-square size-5 bg-primary inline-block rounded-full mr-4"></span>
                 Rajneesh
-              </div>
-              <div className="theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
+              </li>
+              <li className="theme-light hover:bg-base-100 p-2 rounded-md flex items-center">
                 <span className="aspect-square size-5 bg-slate-100 inline-block rounded-full mr-4"></span>
                 Light
-              </div>
-              <div className="theme-dark hover:bg-base-100 p-2 rounded-md flex items-center">
+              </li>
+              <li className="theme-dark hover:bg-base-100 p-2 rounded-md flex items-center">
                 <span className="aspect-square size-5 bg-slate-900 inline-block rounded-full mr-4"></span>
                 Dark
-              </div>
-            </div>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
