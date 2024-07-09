@@ -3,7 +3,7 @@
 .todo-layout{
     display: grid;
     grid-template-columns: minmax(8vw, 80px) 1fr 1fr 1fr;
-    grid-template-rows: 56px repeat(2, 1fr);
+    /* grid-template-rows: 56px repeat(1, 1fr); */
     grid-template-areas: "s n n n"
                         "s  c1 c2 c3"
                         "s f f f";
@@ -36,8 +36,8 @@
 /*  sm: 639px 
     md: 767px
 */
-@media screen and (max-width: 767px) {
-    /* sm:  */
+@media screen and (max-width: 1023px) {
+    /* :smaller than or equal to md   */
     .todo-layout{
         grid-template-areas: 
         "s s"
@@ -46,14 +46,14 @@
         "c2 c3"
         " f f";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 56px 56px repeat(3, 1fr);
+        grid-template-rows: 56px 56px ;
     }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .todo-layout{
         grid-template-areas: "s""n""c1""c2""c3""f";
         grid-template-columns:1fr;
-        grid-template-rows: 50px 56px repeat(4, 1fr);
+        grid-template-rows: 50px 56px;
     }
 }
 
