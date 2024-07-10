@@ -31,6 +31,20 @@ function App() {
     setpendingTododata(p => [...p, {title: value.title, disc: value.disc}])
   }
 
+  // function for col 3 to add data in completed section, and remove from pending in short, mark as completed
+  // value = { title: "soe", disc: "some"}
+  // function also delete the value from the pending
+  function addCompleted(value){
+    setcompleteTododata(c => [...c, {title: value.title, disc: value.disc}])
+
+    setpendingTododata(p => p.filter((_,i) => i!== todoIndex))
+
+    setTodoIndex(i => (i===0)? 0: i-1)
+  }
+
+  function deletePermanent(indexOfCompleted){
+      setcompleteTododata(old => old.filter((_, i) => i!==indexOfCompleted))
+  }
 
   return (
     <>
@@ -44,14 +58,15 @@ function App() {
         {/* todo pending, completed list section */}
         <Col_2
           showTodoFunc={showTodoDetail}
-          datas={{ pendingTododata, completeTododata }}
+          datas={{ pendingTododata, completeTododata}}
+          deleteFunction={deletePermanent}
         />
 
         {/* todo details section */}
         <Col_3
           todoIndexValue={todoIndex}
           datas={pendingTododata}
-          
+          addCompletedFunction={addCompleted}
         />
 
         {/* footer */}

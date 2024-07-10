@@ -1,4 +1,10 @@
-export default function ShowTodo({ title, data, status, show }) {
+export default function ShowTodo({ 
+  title, 
+  data, 
+  status, 
+  show,
+  onDelete
+}) {
   return (
     <div className="px-2">
       {/* title */}
@@ -60,7 +66,7 @@ export default function ShowTodo({ title, data, status, show }) {
             </p>
 
           {/* todo button
-          btn to send key in other functiom ex: a[1] */}
+          btn to send key in show functiom ex: a[1] */}
             {status === "pending" ? (
               <button
                 className="tooltip tooltip-left tooltip-success my-2 btn btn-circle btn-outline btn-success btn-xs right-4 bottom-4 absolute"
@@ -73,6 +79,8 @@ export default function ShowTodo({ title, data, status, show }) {
               <button
                 className="tooltip tooltip-left tooltip-error my-2 btn btn-circle btn-outline btn-error btn-xs float-right absolute right-4 bottom-4"
                 data-tip="delete todo"
+                onClick={()=>onDelete(keys)}
+
               >
                 <i className="fa-solid fa-trash"></i>
               </button>

@@ -1,51 +1,11 @@
+import ImgUrl from '/creative-todo-tick.svg'
+
 export default function Footer() {
   return (
     <footer className=" footer footer-center bg-base-300 text-bg-base-content py-10">
       <aside>
         <div className="svg-cont w-20 h-20 rounded-full">
-          <svg
-            className="hover:animate-pulse"
-            viewBox="0 -1.9 11 11"
-            version="1.1"
-            fill="#eee"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              {" "}
-              <title>[ svg from svg repo]</title>{" "}
-              <desc>Created with Sketch.</desc> <defs> </defs>{" "}
-              <g
-                id="Page-1"
-                stroke="none"
-                strokeWidth="1"
-                fill="none"
-                fillRule="evenodd"
-              >
-                {" "}
-                <g
-                  id="Dribbble-Light-Preview"
-                  transform="translate(-304.000000, -366.000000)"
-                  fill="#e6e6e6"
-                >
-                  {" "}
-                  <g id="icons" transform="translate(56.000000, 160.000000)">
-                    {" "}
-                    <polygon
-                      id="done_mini-[#d4d4d4]"
-                      points="259 207.6 252.2317 214 252.2306 213.999 252.2306 214 248 210 249.6918 208.4 252.2306 210.8 257.3082 206"
-                    >
-                      {" "}
-                    </polygon>{" "}
-                  </g>{" "}
-                </g>{" "}
-              </g>{" "}
-            </g>
-          </svg>
+         <img src={ImgUrl}></img>
         </div>
 
         <p className="hover:animate-pulse font-bold">

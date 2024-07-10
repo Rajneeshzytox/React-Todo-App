@@ -3,7 +3,7 @@ import CircleStats from "../components/CircleStats";
 import { useState } from "react";
 
 export default function Col_1({ addTodoFunction }) {
-  const [todoInput, setIodoInput] = useState({ title: "", disc: "" });
+  const [todoInput, setIodoInput] = useState({ title: null, disc: null });
 
   // this function change the todo inputs useState value
   function changeTodoInput(e) {
@@ -12,8 +12,10 @@ export default function Col_1({ addTodoFunction }) {
 
   // this fun run when add button clicked
   function onClickBtn() {
-    addTodoFunction(todoInput);
-    setIodoInput((t) => ({ title: "", disc: "" }));
+   
+      addTodoFunction(todoInput)
+      setIodoInput((t) => ({ title: '', disc: '' }))
+      
   }
 
   return (
@@ -27,9 +29,9 @@ export default function Col_1({ addTodoFunction }) {
       {/* todo stats */}
       <CardStats />
       <CardStats />
-
+      
       {/* Add todo section */}
-      <div className="col-span-full bg-base-300 min-h-52 rounded-2xl relative overflow-clip shadow bg-opacity-50 shadow-primary flex items-start justify-center gap-4 flex-col pl-12 ">
+      <div id="addTodoSection" className="col-span-full bg-base-300 min-h-52 rounded-2xl relative overflow-clip shadow bg-opacity-50 shadow-primary flex items-start justify-center gap-4 flex-col pl-12 ">
         {/* add todo form title */}
         <div className="text-xl font-semibold uppercase">Add Todo list</div>
         {/* add todo form Inputs Container */}
@@ -42,6 +44,7 @@ export default function Col_1({ addTodoFunction }) {
             value={todoInput.title}
             placeholder="Start this beautiful repo"
             onChange={(e) => changeTodoInput(e)}
+            required
           />
           <br />
           {/* add todo disc Input */}
@@ -52,6 +55,7 @@ export default function Col_1({ addTodoFunction }) {
             name="disc"
             value={todoInput.disc}
             onChange={(e) => changeTodoInput(e)}
+            required
           />
 
           {/* add todo function button */}
@@ -59,6 +63,7 @@ export default function Col_1({ addTodoFunction }) {
           <button
             className="btn hover:bg-base-300 bg-primary btn-sm uppercase"
             onClick={onClickBtn}
+            
           >
             + Add
           </button>
