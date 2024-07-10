@@ -1,13 +1,15 @@
-import ImgUrl from '/creative-todo-tick.svg'
+import Logo from "../components/Logo";
 
 export default function Footer() {
   return (
     <footer className=" footer footer-center bg-base-300 text-bg-base-content py-10">
       <aside>
-        <div className="svg-cont w-20 h-20 rounded-full">
-         <img src={ImgUrl}></img>
+        {/* logo */}
+        <div className="svg-cont w-20 h-20 aspect-square hover:bg-transparent">
+          <Logo opposite={true} />
         </div>
 
+        {/* footer text */}
         <p className="hover:animate-pulse font-bold">
           Rajneeshzytox
           <br />
