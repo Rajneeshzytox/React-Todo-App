@@ -1,12 +1,43 @@
+import { useState } from "react";
 import Logo from "../components/Logo";
 
 export default function Footer() {
+  // use state for the logo on moude enter enimation
+  // logo position is the translate X value
+  const [logoPosition, setLogoPosition] = useState("0%");
+
+  // ON MOUSE ENTER LOGO ANIMATION
+    const onMouseEnterLogo = () => {
+      setLogoPosition('-3rem')
+      document.getElementById('logo-brand-text')
+    }
+    const onMouseLeaveLogo = () => {
+      setLogoPosition('0%')
+      
+    }
+
   return (
     <footer className=" footer footer-center bg-base-300 text-bg-base-content py-10">
       <aside>
         {/* logo */}
-        <div className="svg-cont w-20 h-20 aspect-square hover:bg-transparent">
-          <Logo opposite={true} />
+
+        <div
+          className="svg-cont w-48 h-20 aspect-square hover:bg-transparent relative select-none flex justify-center items-center transition-all overflow-x-clip *:transition-all"
+         
+        >
+          <div name="logo container"
+            className="w-96 h-full ring"
+            style={{transform : `translateX(${logoPosition})`}}
+          >
+            <Logo opposite={true} parentAnimation={{onMouseEnterLogo, onMouseLeaveLogo}}/>
+          </div>
+          <h3
+            id="logo-brand-text"
+            className="text-nowrap whitespace-nowrap text-slate-600 text-lg font-semibold uppercase absolute"
+            translate="false"
+          >
+            Creative Todo App
+          </h3>
         </div>
 
         {/* footer text */}

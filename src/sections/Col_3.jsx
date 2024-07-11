@@ -15,7 +15,7 @@ export default function Col_3(
   
         {/* button to mark as completede */}
         <button
-          className="btn btn-circle btn-outline btn-success btn-sm tooltip tooltip-success tooltip-right"
+          className="btn btn-circle btn-outline btn-success text-success-content btn-sm tooltip tooltip-success tooltip-right"
           data-tip="completed"
           onClick={() => addCompletedFunction({
             title: datas[todoIndexValue].title, 
@@ -27,6 +27,7 @@ export default function Col_3(
         </button>
         </>
         ): (
+          // if there is nothing to show on col 3
             <div>
               <h3 className="text-xl font-semibold text-success">Wooohhh ! </h3>
               <p>

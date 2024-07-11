@@ -9,18 +9,19 @@ import { useState } from "react";
 
 function App() {
   // all useStates
-
-  // pending todo data
+  
+  // ############ => pending todo data
   const [pendingTododata, setpendingTododata] = useState([
     { title: "hello", disc: "disc" },
   ]);
-  // completed todo data
+  // ########### => completed todo data
   const [completeTododata, setcompleteTododata] = useState([
     { title: "Completed", disc: "disc" },
   ]);
 
   // current todo array index index (to display todo in col 3)
   const [todoIndex, setTodoIndex] = useState(0);
+
   // function to display todo details in col 3
   function showTodoDetail(key) {
     setTodoIndex((t) => key);
@@ -48,12 +49,22 @@ function App() {
 
   return (
     <>
+    <div id="top-alert" className="warning text-warning-content bg-warning bg-opacity-55 px-6 flex justify-between items-center cursor-pointer select-none"
+      onClick={ () => document.getElementById('top-alert').style.display ="none"}
+    >
+      <span>This project is in construction</span>
+      <span className="text-lg px-2 rotate-45">+</span>
+    </div>
       <div className="todo-layout">
         <Sidebar />
         <Navbar />
 
         {/* stats of all todo */}
-        <Col_1 addTodoFunction={todoAdd} todoIndexValue={todoIndex} />
+        <Col_1 
+          addTodoFunction={todoAdd} 
+          pendingCount={pendingTododata.length} 
+          completedCount={completeTododata.length} 
+          />
 
         {/* todo pending, completed list section */}
         <Col_2

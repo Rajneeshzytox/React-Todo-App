@@ -18,7 +18,7 @@ export default function ShowTodo({
       </h2>
 
       {/* todo lists box */}
-      <ul className="bg-base-300  max-h-[50vh] overflow-y-scroll px-2 *:my-4 ">
+      <ul className="bg-base-300 rounded-xl max-h-[50vh] overflow-y-scroll px-2 *:my-4 ">
         {/* todo li list*/}
         {data.map((todo, keys) => (
           <li

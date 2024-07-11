@@ -9,11 +9,11 @@ export default function Navbar() {
   // }
 
   return (
-    <section className="drawer z-50">
+    <section className="drawer z-20 *:z-auto">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col ">
         {/* Navbar */}
-        <div className="navbar bg-base-300 w-full z-auto rounded-full bg-transparent">
+        <div className="navbar z-auto bg-base-300 w-full rounded-full bg-transparent">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
