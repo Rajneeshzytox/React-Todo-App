@@ -1,5 +1,6 @@
 import CardStats from "../components/CardStats";
 import CircleStats from "../components/CircleStats";
+import ComputerSvg from '/svg-first.svg'
 import { useState } from "react";
 
 export default function Col_1({ addTodoFunction, pendingCount, completedCount }) {
@@ -49,7 +50,7 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
           />
       
       {/* Add todo section */}
-      <div id="addTodoSection" className="col-span-full bg-base-300 min-h-52 rounded-2xl relative overflow-clip shadow bg-opacity-50 shadow-primary flex items-start justify-center gap-4 flex-col pl-12 ">
+      <div id="addTodoSection" className="col-span-full bg-primary min-h-52 rounded-2xl relative overflow-clip shadow-xl bg-opacity-50 shadow-base flex items-start justify-center gap-4 flex-col pl-12 ">
         {/* add todo form title */}
         <div className="text-xl font-semibold uppercase">Add Todo list</div>
         {/* add todo form Inputs Container */}
@@ -57,7 +58,7 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
           {/* add todo title Input */}
           <input
             type="text"
-            className="input input-sm max-w-xs input-bordered bg-base-300 bg-opacity-50 w-full input-lg mb-4"
+            className="input input-sm max-w-xs input-bordered bg-base-300 bg-opacity-90 w-full input-lg mb-4"
             name="title"
             value={todoInput.title}
             placeholder="Start this beautiful repo"
@@ -68,7 +69,7 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
           {/* add todo disc Input */}
           <textarea
             type="text"
-            className="textarea bg-base-300 bg-opacity-50 textarea-bordered w-full mb-2 "
+            className="textarea bg-base-300 bg-opacity-80 textarea-bordered w-full mb-2 "
             placeholder="My first task is to star this beautiful repo"
             name="disc"
             value={todoInput.disc}
@@ -87,7 +88,7 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
           </button>
           <img
             className="absolute w-64 z-[-1] top-0 right-0"
-            src="./svg-first.svg"
+            src={ComputerSvg}
           />
         </div>
       </div>

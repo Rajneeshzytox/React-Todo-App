@@ -17,11 +17,17 @@ export default function Logo({
           src={logo} 
           onMouseEnter={() => {
                 setlogo(old => (opposite) ? imgUrl1 : imgUrl2) ;
-                parentAnimation.onMouseEnterLogo();
+                if(parentAnimation){
+                    parentAnimation.onMouseEnterLogo();
+                }
             }} 
-          onMouseLeave={()=> {
-            setlogo(old=> (opposite) ? imgUrl2 : imgUrl1);
-            parentAnimation.onMouseLeaveLogo();
+            onMouseLeave={()=> {
+                setlogo(old=> (opposite) ? imgUrl2 : imgUrl1);
+                
+                if(parentAnimation){
+                    parentAnimation.onMouseLeaveLogo();
+                }
+         
           }}
          />
         </>

@@ -10,7 +10,7 @@ function CircleStats({
       <div className="flex flex-col gap-2">
       
         <div
-        className="radial-progress text-blue-600 shadow-lg shadow-primary -z-10 mx-auto"
+        className="radial-progress text-primary shadow-primary -z-10 mx-auto"
         style={{ "--value":  CircleStatsValue }}
         role="progressbar"
       >

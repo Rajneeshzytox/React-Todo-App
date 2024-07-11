@@ -4,14 +4,15 @@ export default function Col_3(
       addCompletedFunction
     }) {
   return (
-    <section className="col-3 relative flex flex-col gap-4 items-start justify-center md:justify-start py-8 px-10">
+    <section className="col-3 relative flex flex-col gap-4 items-start  justify-start py-8 px-10 overflow-y-scroll max-h-screen">
       {
         (datas[todoIndexValue])?(
           <>
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-2xl text-pretty font-semibold">
           {datas[todoIndexValue].title}
         </h2>
-        <p>{datas[todoIndexValue].disc}</p>
+        <div className="divider"></div>
+        <p className=" text-balance">{datas[todoIndexValue].disc}</p>
   
         {/* button to mark as completede */}
         <button
@@ -28,12 +29,14 @@ export default function Col_3(
         </>
         ): (
           // if there is nothing to show on col 3
-            <div>
+            <div> 
               <h3 className="text-xl font-semibold text-success">Wooohhh ! </h3>
-              <p>
+              <div className="divider"></div>
+              
+              <p >
               you have completed all your pending task !!!!
               </p>
-              <a className="text-sm bg-primary px-4 py-1 my-2 rounded-btn inline-block" href="#addTodoSection">Add data to show <i className="fa-solid fa-arrow-up mx-1"></i></a>
+              <a className="text-sm bg-primary text-primary-content px-4 py-1 my-2 rounded-btn inline-block" href="#addTodoSection">Add data to show <i className="fa-solid fa-arrow-up mx-1"></i></a>
             </div>
         )
 

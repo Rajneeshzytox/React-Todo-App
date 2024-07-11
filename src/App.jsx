@@ -49,12 +49,13 @@ function App() {
 
   return (
     <>
-    <div id="top-alert" className="warning text-warning-content bg-warning bg-opacity-55 px-6 flex justify-between items-center cursor-pointer select-none"
+    {/* ### ALERT ###
+    <div id="top-alert" className="warning text-white ring-warning px-6 flex justify-between items-center cursor-pointer select-none"
       onClick={ () => document.getElementById('top-alert').style.display ="none"}
     >
       <span>This project is in construction</span>
       <span className="text-lg px-2 rotate-45">+</span>
-    </div>
+    </div> */}
       <div className="todo-layout">
         <Sidebar />
         <Navbar />

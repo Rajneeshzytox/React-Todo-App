@@ -1,26 +1,26 @@
 export default function Sidebar() {
   return (
-    <section className=" relative bg-gradient-to-r from-blue-900 to-blue-800 bg-opacity-50 sidebar z-10">
-      <span className="glass pointer-events-none w-full h-full absolute"></span>
-      <div className="side-cont h-full lg:h-screen flex lg:flex-col items-center justify-between select-none sticky w-full mx-auto top-0 lg:px-0 px-8 ">
+    <section className=" relative  bg-base-300 sidebar z-10">
+      {/* sidebar another glass */}
+      <div className="side-cont h-full lg:h-[90vh] flex lg:flex-col items-center justify-between select-none sticky lg:rounded-full lg:w-1/2 mx-auto top-0 lg:top-8 lg:bottom-8 lg:px-0 px-8 bg-gradient-to-r lg:bg-gradient-to-b from-primary to-secondary bg-opacity-50">
         <div className="w-10 aspect-square bg-slate-500 rounded-full lg:my-8 overflow-clip">
           <img src="./me.jpg" alt="logo" />
         </div>
 
 
         {/* sidebar heading */}
-        <h2 className="uppercase sm:tracking-[10px] lg:-rotate-90 font-semibold text-primary-content">
+        <h2 className="uppercase sm:tracking-[10px] lg:-rotate-90 font-semibold text-primary-content  max-sm:hidden ">
           Rajneeshzytox
         </h2>
 
 
         {/* sidebar label for info box checkbox  */}
         <label
-          className="w-6 aspect-square ring rounded-full lg:my-6 flex items-center justify-center font-semiold italic text-white cursor-help relative"
+          className="w-6 aspect-square ring ring-primary-content rounded-full lg:my-6 flex items-center justify-center font-semiold italic text-primary-content cursor-help relative"
           htmlFor="my_modal_7"
         >
           <div
-            className="animate-ping w-full h-full bg-sky-500 absolute rounded-full pointer-events-none "
+            className="animate-ping w-full h-full bg-primary absolute rounded-full pointer-events-none "
             style={{ animationDuration: "2s" }}
           ></div>
           i
