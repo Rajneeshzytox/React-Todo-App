@@ -35,7 +35,7 @@ export default function Themes(){
               name="theme-radio"
               id="rajneesh"
               value="rajneesh"
-              className="theme-controller radio"
+              className="theme-controller radio radio-primary"
               aria-label="rajneesh Theme"
               defaultChecked
             />
@@ -50,7 +50,7 @@ export default function Themes(){
               name="theme-radio"
               id={theme}
               value={theme}
-              className="theme-controller radio"
+              className="theme-controller radio radio-primary"
               aria-label={`${theme} theme`}
             />
           </label>

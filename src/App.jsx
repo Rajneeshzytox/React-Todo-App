@@ -12,7 +12,8 @@ function App() {
   
   // ############ => pending todo data
   const [pendingTododata, setpendingTododata] = useState([
-    { title: "hello", disc: "disc" },
+    { title: "Welcome to creative todo react app",
+      disc: `Click on the button below to mark as completed` },
   ]);
   // ########### => completed todo data
   const [completeTododata, setcompleteTododata] = useState([
@@ -42,10 +43,17 @@ function App() {
 
     setTodoIndex(i => (i===0)? 0: i-1)
   }
-
+// function to delete permanent
   function deletePermanent(indexOfCompleted){
       setcompleteTododata(old => old.filter((_, i) => i!==indexOfCompleted))
   }
+
+// function to restore data,
+// indexOfTodoToRestore: when a user click on a todo, its index store in it
+function restoreTodo(indexOfTodoToRestore, value){
+    setpendingTododata(old =>  [...old, value])
+    // we dont have to write delete code from completed section as, already deletePermant exist.. we will call it again...
+}
 
   return (
     <>
@@ -72,6 +80,7 @@ function App() {
           showTodoFunc={showTodoDetail}
           datas={{ pendingTododata, completeTododata}}
           deleteFunction={deletePermanent}
+          restoreFunction={restoreTodo}
         />
 
         {/* todo details section */}

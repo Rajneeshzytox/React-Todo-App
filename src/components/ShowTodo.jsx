@@ -3,7 +3,8 @@ export default function ShowTodo({
   data, 
   status, 
   show,
-  onDelete
+  onDelete,
+  onRestore,
 }) {
   return (
     <div className="px-2">
@@ -76,14 +77,25 @@ export default function ShowTodo({
                <i className=" fa-solid fa-up-right-and-down-left-from-center"></i>
               </button>
             ) : status === `completed` ? (
+              <>
               <button
                 className="tooltip tooltip-left tooltip-error my-2 btn btn-circle btn-outline btn-error btn-xs float-right absolute right-4 bottom-4"
                 data-tip="delete todo"
                 onClick={()=>onDelete(keys)}
-
+              >
+                <i className="fa-solid fa-trash"></i>
+                </button>
+              <button
+                className="tooltip tooltip-left tooltip-success my-2 btn btn-circle btn-outline btn-syccess btn-xs float-right absolute right-12 bottom-4"
+                data-tip="restore todo"
+                onClick={() => {
+                  onRestore(keys, todo)
+                  onDelete(keys)
+                }}
               >
                 <i className="fa-solid fa-trash"></i>
               </button>
+              </>
             ) : null}
           </li>
         ))}

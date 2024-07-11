@@ -5,8 +5,7 @@ export default {
   //...
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "/public/*.{svg}",
+    "./src/**/*.{js,ts,jsx,tsx,svg}",
   ],
   
   // add daisyUI plugin

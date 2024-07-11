@@ -1,6 +1,6 @@
 import CardStats from "../components/CardStats";
 import CircleStats from "../components/CircleStats";
-import ComputerSvg from '/svg-first.svg'
+import ComputerSvg from '../svgs/svg-first.svg'
 import { useState } from "react";
 
 export default function Col_1({ addTodoFunction, pendingCount, completedCount }) {
@@ -93,7 +93,7 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
         </div>
       </div>
       <span
-        className="absolute inline-block size-28 rounded-full bg-gradient-to-r from-blue-500 pointer-events-none select-none to-primary -bottom-4 opacity-55 blur-2xl -right-4 -z-[2]"
+        className="absolute inline-block size-28 rounded-full bg-gradient-to-r from-secondary pointer-events-none select-none to-primary -bottom-4 opacity-55  -right-4 blur-xl -z-[10]"
         aria-hidden="true"
       ></span>
     </section>

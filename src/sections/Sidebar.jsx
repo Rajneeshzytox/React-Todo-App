@@ -16,11 +16,11 @@ export default function Sidebar() {
 
         {/* sidebar label for info box checkbox  */}
         <label
-          className="w-6 aspect-square ring ring-primary-content rounded-full lg:my-6 flex items-center justify-center font-semiold italic text-primary-content cursor-help relative"
+          className="w-6 aspect-square  rounded-full lg:my-6 flex items-center justify-center font-semiold italic text-secondary-content cursor-help relative"
           htmlFor="my_modal_7"
         >
           <div
-            className="animate-ping w-full h-full bg-primary absolute rounded-full pointer-events-none "
+            className="animate-ping w-full h-full bg-secondary-content  absolute rounded-full pointer-events-none "
             style={{ animationDuration: "2s" }}
           ></div>
           i
