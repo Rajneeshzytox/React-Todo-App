@@ -5,10 +5,10 @@ function CardStats(
   }
 ){
     return(
-        <div className="stats from-blue-400 to-primary bg-clip-text text-transparent bg-gradient-to-l shadow-primary shadow mr-4">
-        <div className="stat">
-          <div className="stat-title">{title}</div>
-          <div className="stat-value">{data}</div>
+        <div className="stats shadow mr-4">
+        <div className="stat flex flex-col items-center justify-evenly *:text-center">
+          <div className="stat-title  text-wrap break-words ">{title}</div>
+          <div className="text-6xl font-bold to-cyan-500  from-primary bg-clip-text text-transparent bg-gradient-to-t ">{data}</div>
          
         </div>
       </div>
