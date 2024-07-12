@@ -10,26 +10,26 @@ function UserWelcomeBox(){
         const [welcomeMsg, setWelcomeMsg] = useState([
             {
                 // index 0
-                title: 'wlcome title 1 msg',
-                disc: 'text disc',
-                src: '/me.jpg',
+                title: 'Welcome to Creative Todo App',
+                disc: 'Welcome to Creative Todo App, a simple and efficient way to manage your tasks. Stay organized with features that help you add, view, and manage your todos effortlessly. Dive in and start getting things done!',
+                src: '',
             },
             {
                 // index 1
-                title: 'wlcome title 2 msg',
-                disc: 'text disc',
+                title: 'App Functionality',
+                disc: 'Explore the powerful functionality of Creative Todo App. Easily add new tasks, view your todo list, mark tasks as complete, restore deleted tasks, and permanently delete tasks you no longer need. Each feature is designed to make task management seamless and intuitive.',
                 src: '/me.jpg',
             },
             {
                 // index 2
-                title: 'wlcome title 3 msg',
-                disc: 'text disc',
+                title: 'Customize Your Experience With Themes',
+                disc: ' Personalize App with theme feature. Switch between different themes to match your style and mood. Enjoy a tailored user experience with dynamic SVG colors that change with the theme.',
                 src: '/me.jpg',
             },
             {
                 // index 3
-                title: 'wlcome title 4 msg',
-                disc: 'text disc',
+                title: 'Track Your Progress',
+                disc: 'Stay on top of your productivity with analytics feature. Get insights into your task management',
                 src: '/me.jpg',
             },
 
@@ -38,12 +38,12 @@ function UserWelcomeBox(){
 
         // stepClick function sets the index value to setWelcomeMsg state and also add class step-primary to add primary color to steps
         function stepClick( index){
-            setWelcomeMsg(index);
+            setWelcomeMsgIndex(index);
         }
 
     return(
         // background overlay
-        <div id="UserWelcome" className="bg-base-300 bg-opacity-50 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col items-center justify-center backdrop-blur-sm  ">
+        <div id="UserWelcome" className="bg-slate-200 fixed z-50 min-h-screen w-[100vw] flex flex-col items-center justify-center text-slate-900 px-10 text-center overflow-y-scroll">
         
         {/* hide welcome or skip  */}
         <div className="absolute top-12 right-12 select-none cursor-pointer btn btn-ghost btn-circle rotate-45 text-3xl block z-[2]" 
@@ -53,19 +53,18 @@ function UserWelcomeBox(){
         </div>
 
         {/* white msg welcom box */}
-        <div className="max-w-[80%] md:w-[600px] sm:w-[500px] w-[70%] min-w-1/2  bg-slate-200  min-h-[30vh] text-slate-800 px-8 py-4 rounded-xl shadow-2xl z-[1] max-h-[60vh]  overflow-y-scroll">
+        
+             {/* Welcome Box Gif  */}
+            <img className="max-h-[40vh] mx-auto" src={welcomeMsg[welcomeMsgIndex].src}></img>
+            <div className="divider"></div>
              {/* Welcome Text Content  */}
             <h4 className="text-xl text-balance font-semibold my-2">
                 {welcomeMsg[welcomeMsgIndex].title}
             </h4>
-            <p>
+            <p className="max-w-[500px]">
                 {welcomeMsg[welcomeMsgIndex].disc}
             </p>
-            <div className="divider divider-neutral"></div>
-             {/* Welcome Box Gif  */}
-            <img src={welcomeMsg[welcomeMsgIndex].src}></img>
 
-        </div>
 
         {/* welcome steps */}
         <ul className="steps mt-6 steps-horizontal ">
@@ -74,7 +73,7 @@ function UserWelcomeBox(){
                     <li
                     
                         key={index}
-                        onClick={(e) => (
+                        onClick={() => (
                             stepClick(index)
                         )}
                         className="step"
