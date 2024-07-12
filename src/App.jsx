@@ -5,6 +5,9 @@ import Col_2 from "./sections/Col_2";
 import Col_3 from "./sections/Col_3";
 import Footer from "./sections/Footer";
 
+// user welcome screen
+import UserWelcome from "./components/UserWelcome";
+
 import { useState } from "react";
 
 function App() {
@@ -64,6 +67,9 @@ function restoreTodo(indexOfTodoToRestore, value){
       <span>This project is in construction</span>
       <span className="text-lg px-2 rotate-45">+</span>
     </div> */}
+
+    {/* user welcome screen */}
+    <UserWelcome />
       <div className="todo-layout">
         <Sidebar />
         <Navbar />

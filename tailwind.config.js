@@ -50,7 +50,7 @@ export default {
       rajneesh: {
           "primary": "#1d4ed8",
           "primary-content": "#cfdefb",
-          "secondary": "#d1d5db",
+          "secondary": "rgb(50, 200, 255)",
           "secondary-content": "#101011",
           "accent": "#818cf8",
           "accent-content": "#060715",

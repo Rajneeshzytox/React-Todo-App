@@ -2,42 +2,40 @@ import { useState } from "react";
 import Logo from "../components/Logo";
 
 export default function Footer() {
-  // use state for the logo on moude enter enimation
-  // logo position is the translate X value
-  const [logoPosition, setLogoPosition] = useState("0%");
+  // this will set conponent on footer logo, as mouse enters or exit
+  // footer logo true = tick logo, while fase is creative todo logo
+    const [footerLogo, setFooterLogo] = useState(false);
+    
+    const footerLogoComponent = (footerLogo) ? (
+      <Logo opposite={true}/>
+    ):(
+      <>
+      <Logo/>
+      </>
+    );
 
-  // ON MOUSE ENTER LOGO ANIMATION
-    const onMouseEnterLogo = () => {
-      setLogoPosition('-3rem')
-      document.getElementById('logo-brand-text')
-    }
-    const onMouseLeaveLogo = () => {
-      setLogoPosition('0%')
-      
-    }
 
   return (
     <footer className=" footer footer-center bg-base-300 text-bg-base-content py-10">
       <aside>
         {/* logo */}
 
+
+
         <div
-          className="svg-cont w-48 h-20 aspect-square hover:bg-transparent relative select-none flex justify-center items-center transition-all overflow-x-clip *:transition-all"
+          className="svg-cont max-w-[90%] w-fit h-20 aspect-square hover:bg-transparent relative select-none flex justify-center items-center transition-all *:transition-all "
          
         >
+          {/* div to hold unstable svg dont remove it */}
           <div name="logo container"
-            className="w-96 h-full ring"
-            style={{transform : `translateX(${logoPosition})`}}
+            className="w-96 h-full flex justify-between items-center"
+            onMouseEnter={() => setFooterLogo(false)}
+            onMouseLeave={() => setFooterLogo(true)}
           >
-            <Logo opposite={true} parentAnimation={{onMouseEnterLogo, onMouseLeaveLogo}}/>
+            {/* footer Logo Component here */}
+            {footerLogoComponent}
           </div>
-          <h3
-            id="logo-brand-text"
-            className="text-nowrap whitespace-nowrap text-slate-600 text-lg font-semibold uppercase absolute"
-            translate="false"
-          >
-            Creative Todo App
-          </h3>
+          
         </div>
 
         {/* footer text */}

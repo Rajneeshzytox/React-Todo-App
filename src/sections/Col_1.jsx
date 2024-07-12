@@ -1,6 +1,6 @@
 import CardStats from "../components/CardStats";
 import CircleStats from "../components/CircleStats";
-import ComputerSvg from '../svgs/svg-first.svg'
+import ComputerSvg from '../svgs/ComputerSvg'
 import { useState } from "react";
 
 export default function Col_1({ addTodoFunction, pendingCount, completedCount }) {
@@ -86,10 +86,14 @@ export default function Col_1({ addTodoFunction, pendingCount, completedCount })
           >
             + Add
           </button>
-          <img
+
+
+          {/* computer Svg */}
+          <div
             className="absolute w-64 z-[-1] top-0 right-0"
-            src={ComputerSvg}
-          />
+          >
+              <ComputerSvg />
+          </div>
         </div>
       </div>
       <span

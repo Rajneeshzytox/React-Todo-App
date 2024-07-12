@@ -1,36 +1,20 @@
-import imgUrl1 from '/creative-todo.svg'
-import imgUrl2 from '/creative-todo-tick.svg'
-import { useState } from 'react';
+import CreativeTodo from '../svgs/creative-todo';
+import CreativeTodoTick from '../svgs/CreativeTodoTick';
 
 
-export default function Logo({
-    opposite, // if true image will change src in opposite direction
-    parentAnimation  //run other func in parent node, whne mouse enter or leave
+
+export default function Logo({opposite, 
 }){
-    const imgUrl = (opposite) ? imgUrl2 : imgUrl1;
-    const [logo, setlogo] = useState(imgUrl)
+    // if opposite true image will change src in opposite 
+    const logo = (opposite) ?
+                    <CreativeTodoTick /> : 
+                    <CreativeTodo />;
     return(
-        <>
-        
-        {/* LOGO HERE */}
-         <img className='transition-all w-full size-full' 
-          src={logo} 
-          onMouseEnter={() => {
-                setlogo(old => (opposite) ? imgUrl1 : imgUrl2) ;
-                if(parentAnimation){
-                    parentAnimation.onMouseEnterLogo();
-                }
-            }} 
-            onMouseLeave={()=> {
-                setlogo(old=> (opposite) ? imgUrl2 : imgUrl1);
-                
-                if(parentAnimation){
-                    parentAnimation.onMouseLeaveLogo();
-                }
-         
-          }}
-         />
-        </>
+            <div 
+                className=" h-full w-full overflow-hidden"
+            >
+               {logo}
+            </div>
         
     )
 }

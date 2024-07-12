@@ -7,7 +7,7 @@ export default function ShowTodo({
   onRestore,
 }) {
   return (
-    <div className="px-2">
+    <div className="px-2 " >
       {/* title */}
       <h2 className="mb-4 text-lg font-semibold ml-2">
         {status === "pending" ? (
@@ -47,7 +47,7 @@ export default function ShowTodo({
           
           {/* todo title */}
             <h3
-              className={`truncate font-semibold 
+              className={`truncate w-[90%] font-semibold 
                   ${
                     status === "completed"
                       ? "line line-through text-success"
@@ -59,7 +59,7 @@ export default function ShowTodo({
             </h3>
           {/* todo disc small */}
             <p
-              className={`truncate text-xs 
+              className={`truncate w-[90%] text-xs 
                   ${status === "completed" ? "line line-through" : ""}
                   `}
             >
@@ -86,14 +86,14 @@ export default function ShowTodo({
                 <i className="fa-solid fa-trash"></i>
                 </button>
               <button
-                className="tooltip tooltip-left tooltip-success my-2 btn btn-circle btn-outline btn-syccess btn-xs float-right absolute right-12 bottom-4"
+                className="tooltip tooltip-left tooltip-neutral my-2 btn btn-circle btn-outline btn-neutral btn-xs float-right absolute right-12 bottom-4"
                 data-tip="restore todo"
                 onClick={() => {
                   onRestore(keys, todo)
                   onDelete(keys)
                 }}
               >
-                <i className="fa-solid fa-trash"></i>
+                <i className="fa-solid fa-rotate-left"></i>
               </button>
               </>
             ) : null}
