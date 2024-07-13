@@ -4,7 +4,7 @@ import Logo from "../components/Logo";
 export default function Footer() {
   // this will set conponent on footer logo, as mouse enters or exit
   // footer logo true = tick logo, while fase is creative todo logo
-    const [footerLogo, setFooterLogo] = useState(false);
+    const [footerLogo, setFooterLogo] = useState(true);
     
     const footerLogoComponent = (footerLogo) ? (
       <Logo opposite={true}/>

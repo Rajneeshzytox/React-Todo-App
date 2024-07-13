@@ -19,7 +19,7 @@ export default function ShowTodo({
       </h2>
 
       {/* todo lists box */}
-      <ul className="bg-base-300 rounded-xl max-h-[50vh] overflow-y-scroll px-2 *:my-4 ">
+      <ul className="rounded-xl max-h-[50vh] overflow-y-scroll px-2 *:my-4 ">
         {/* todo li list*/}
         {data.map((todo, keys) => (
           <li
@@ -47,7 +47,7 @@ export default function ShowTodo({
           
           {/* todo title */}
             <h3
-              className={`truncate w-[90%] font-semibold 
+              className={`truncate w-[80%] font-semibold 
                   ${
                     status === "completed"
                       ? "line line-through text-success"
@@ -59,7 +59,7 @@ export default function ShowTodo({
             </h3>
           {/* todo disc small */}
             <p
-              className={`truncate w-[90%] text-xs 
+              className={`truncate w-[80%] text-xs 
                   ${status === "completed" ? "line line-through" : ""}
                   `}
             >

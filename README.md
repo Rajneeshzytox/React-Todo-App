@@ -1,14 +1,23 @@
-# Todo App with Vite, React, TailwindCSS, and DaisyUI
+![Creative Todo Rajneeshzytox](/public/desktop.png)
+
+# Creative Todo React App
 
 This project is a Todo application built to learn and demonstrate the fundamentals of React. The app is developed using Vite, React, TailwindCSS, and DaisyUI. It covers essential React concepts such as components, props, rendering components using the `map` function, and editing arrays of objects in state.
 
+## Live Preview 
+[go to site](https://creative-todo-rajneeshzytox.netlify.app/)
+
+
 ## Features
 
-- **Component-based architecture**: The app is structured using reusable React components.
-- **Props**: Passing data between components using props.
-- **Rendering with `map`**: Dynamically rendering components by iterating over arrays with the `map` function.
-- **State management**: Managing and editing arrays of objects in the component state.
-- **Styling**: Styled using TailwindCSS and DaisyUI for a modern and responsive design.
+- **Add Todo**
+- **Show Todo**
+- **Mark as complete**
+- **Restore Todo to pending**
+- **Delete Todo**
+- **Progress Dashboard**
+- **Multiple Themes (Svg also Changes with themes)**
+
 
 ## Technologies Used
 
@@ -17,7 +26,13 @@ This project is a Todo application built to learn and demonstrate the fundamenta
 - **TailwindCSS**: Utility-first CSS framework for styling.
 - **DaisyUI**: TailwindCSS components for additional UI elements.
 
-## Getting Started
+## Fully Responsive
+- **Tab**
+![best Todo App](./public/tablet.png)
+- **Mobile**
+![best Todo App](./public/mobile.png)
+
+## Download & Run
 
 ```Don't forget to star```
 To get a local copy up and running, follow these simple steps:
@@ -53,6 +68,6 @@ To get a local copy up and running, follow these simple steps:
 ## Contact
 - **Email**: kumarrajneesh.work@gmail.com
 - **LinkedIn**: [rajneeshzytox](https://www.linkedin.com/in/rajneeshzytox/)
-- **Instagram**: @rajneeshzytox
-- **Twitter (X)**: rajneeshzytox
+- **Instagram**: [rajneeshzytox](https://instagram.com/rajneeshzytox)
+- **Twitter (X)**: [rajneeshzytox](https://x.com/rajneeshzytox)
 - **Portfolio**: [rajneeshzytox](rajneeshzytox.github.io/portfolio)
