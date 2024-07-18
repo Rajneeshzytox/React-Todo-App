@@ -89,7 +89,7 @@ export default function ShowTodo({
                 className="tooltip tooltip-left tooltip-neutral my-2 btn btn-circle btn-outline btn-neutral btn-xs float-right absolute right-12 bottom-4"
                 data-tip="restore todo"
                 onClick={() => {
-                  onRestore(keys, todo)
+                  onRestore(todo)
                   onDelete(keys)
                 }}
               >
