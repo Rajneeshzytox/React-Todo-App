@@ -4,17 +4,25 @@ import ComputerSvg from '../svgs/ComputerSvg'
 import { useState } from "react";
 
 export default function Col_1({ addTodoFunction, pendingCount, completedCount }) {
-  const [todoInput, setIodoInput] = useState({ title: "", disc: "" });
+  
+  // todo inpute state
+  const [todoInput, setTodoInput] = useState({ title: "", disc: "" });
 
   // this function change the todo inputs useState value
   function changeTodoInput(e) {
-    setIodoInput((t) => ({ ...t, [e.target.name]: e.target.value }));
+    setTodoInput((t) => ({ ...t, [e.target.name]: e.target.value }));
   }
 
   // this fun run when add button clicked
   function onClickBtn() {
+    if(todoInput.title.trim() === ''){
+      console.log("enter something")
+    } else{
+      // send data to parent function
       addTodoFunction(todoInput)
-      setIodoInput((t) => ({ title: '', disc: '' }))
+    }
+    // reset value
+    setTodoInput((t) => ({ title: '', disc: '' })) 
       
   }
 
